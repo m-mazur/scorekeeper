@@ -37,3 +37,10 @@ c:\users\marcus mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKee
 c:\users\marcus mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\obj\Release\ScoreKeeper.Migrations.Initial.resources
 c:\users\marcus mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\obj\Release\ScoreKeeper.csproj.GenerateResource.Cache
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\index.html
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\knockout.js\knockout.debug.js
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\knockout.js\knockout.js
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\js\viewmodel.js
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower.json
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\knockout.js\.bower.json
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\knockout.js\bower.json
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\knockout.js\README.md
