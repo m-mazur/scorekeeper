@@ -10,27 +10,18 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ScoreKeeper.Models;
+using ScoreKeeper.Repositories;
 
 namespace ScoreKeeper.Controllers
 {
     public class ScoresController : ApiController
     {
         private ScoreKeeperContext db = new ScoreKeeperContext();
-
+        
         // GET api/Scores
-        public IQueryable<ScoreDTO> GetScores()
+        public IEnumerable<Score> GetScores()
         {
-            var scores = from s in db.Scores
-                         select new ScoreDTO()
-                         {
-                             ScoreId = s.ScoreId,
-                             ScorePoints = s.ScorePoints,
-                             ScoreDate = s.ScoreDate,
-
-                             UserId = s.User.UserId,
-                             UserName = s.User.UserName
-                         };
-            return scores;
+            return new ScoreRepository().GetAllScores();
         }
 
         // GET api/Scores/5
