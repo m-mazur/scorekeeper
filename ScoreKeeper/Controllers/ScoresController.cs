@@ -17,7 +17,7 @@ namespace ScoreKeeper.Controllers
     public class ScoresController : ApiController
     {
         private ScoreKeeperContext db = new ScoreKeeperContext();
-        
+
         // GET api/Scores
         public IEnumerable<Score> GetScores()
         {

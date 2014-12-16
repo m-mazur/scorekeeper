@@ -12,7 +12,7 @@ namespace ScoreKeeper.Repositories
 {
     public class ScoreRepository : IScoreRepository
     {
-        private IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["ScoreKeeperRelease"].ConnectionString);
+        private IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["strykDb"].ConnectionString);
 
         public IEnumerable<Score> GetAllScores()
         {
