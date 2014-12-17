@@ -10,5 +10,6 @@ namespace ScoreKeeper.Repositories
     public interface IScoreRepository
     {
         IEnumerable<Score> GetAllScores();
+        Score GetScore(int id);
     }
 }

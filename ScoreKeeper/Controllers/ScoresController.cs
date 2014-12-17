@@ -16,104 +16,36 @@ namespace ScoreKeeper.Controllers
 {
     public class ScoresController : ApiController
     {
-        private ScoreKeeperContext db = new ScoreKeeperContext();
+        private ScoreRepository scoreRepository = new ScoreRepository();
 
         // GET api/Scores
         public IEnumerable<Score> GetScores()
         {
-            return new ScoreRepository().GetAllScores();
+            return scoreRepository.GetAllScores();
         }
 
         // GET api/Scores/5
-        [ResponseType(typeof(Score))]
-        public async Task<IHttpActionResult> GetScore(int id)
+        public Score GetScore(int id)
         {
-            Score score = await db.Scores.FindAsync(id);
+            Score score = scoreRepository.GetScore(id);
+
             if (score == null)
             {
-                return NotFound();
+                throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            return Ok(score);
-        }
-
-        // PUT api/Scores/5
-        public async Task<IHttpActionResult> PutScore(int id, Score score)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != score.ScoreId)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(score).State = EntityState.Modified;
-
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ScoreExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
+            return scoreRepository.GetScore(id);
         }
 
         // POST api/Scores
-        [ResponseType(typeof(Score))]
-        public async Task<IHttpActionResult> PostScore(Score score)
+        public void PostScore(Score score)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
             }
 
-            db.Scores.Add(score);
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = score.ScoreId }, score);
-        }
-
-        // DELETE api/Scores/5
-        [ResponseType(typeof(Score))]
-        public async Task<IHttpActionResult> DeleteScore(int id)
-        {
-            Score score = await db.Scores.FindAsync(id);
-            if (score == null)
-            {
-                return NotFound();
-            }
-
-            db.Scores.Remove(score);
-            await db.SaveChangesAsync();
-
-            return Ok(score);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        private bool ScoreExists(int id)
-        {
-            return db.Scores.Count(e => e.ScoreId == id) > 0;
+            scoreRepository.AddScore(score);
         }
     }
 }
