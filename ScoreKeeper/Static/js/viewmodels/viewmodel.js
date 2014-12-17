@@ -1,6 +1,10 @@
-﻿var ViewModel = function() {
-    var self = this;
-    self.hello = ko.observable("hello");
-};
+﻿(function() {
+    function ViewModel(scoreService) {
+        var self = this;
+        self.hello = ko.observable("hello");
 
-ko.applyBindings(ViewModel());
+        self.scores = ko.observableArray(scoreService.getAllScores);
+        console.log(self.scores());
+    };
+    ko.applyBindings(ViewModel(ScoresService.get()));
+}());
