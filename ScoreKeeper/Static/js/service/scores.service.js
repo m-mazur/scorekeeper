@@ -1,7 +1,7 @@
 var ScoresService = (function() {
 
     var self = this;
-    var scoresUri = 'api/scores'
+    var scoresUri = '/api/Scores'
 
     function ajaxHelper(uri, method, data) {
         self.error(' ');
