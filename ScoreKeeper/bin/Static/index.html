@@ -11,21 +11,32 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title></title>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr><th>Användare</th><th>Poäng</th><th>Datum</th></tr>
-        </thead>
-        <tbody data-bind="foreach: scores">
+    <div class="col-md-4">
+        <h2>Lägg till nytt resultat</h2>
+        
+    </div>
+    <h2>Alla resultat</h2>
+    <div class="col-md-4">
+        <table>
+            <thead>
+                <tr>
+                    <th>Användare</th>
+                    <th>Poäng</th>
+                    <th>Datum</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: scores">
             <tr>
                 <td data-bind="text: UserName"></td>
                 <td data-bind="text: ScorePoints"></td>
                 <td data-bind="text: moment(ScoreDate).format('DD/MM/YYYY')"></td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
