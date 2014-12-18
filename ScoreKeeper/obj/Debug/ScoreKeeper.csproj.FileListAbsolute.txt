@@ -130,5 +130,4 @@ C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKee
 C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Dapper.dll
 C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Dapper.pdb
 C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Dapper.xml
-C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\js\service\scores.service.js
-C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\js\viewmodel\viewmodel.js
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\js\viewmodel.js
