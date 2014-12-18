@@ -17,7 +17,13 @@
 <body>
     <div class="col-md-4">
         <h2>Lägg till nytt resultat</h2>
-
+        <form data-bind="submit: addScore">
+            <select data-bind="options: users, optionsText: 'UserName', optionsValue: 'UserId', value: newScore.UserId"></select>
+            <input data-bind="value: newScore.ScorePoints" />
+            <button type="submit">Lägg till resultat</button>
+        </form>
+        <p data-bind="text: newScore.UserId"></p>
+        <p data-bind="text: newScore.ScorePoints"></p>
     </div>
 
     <div class="col-md-4">

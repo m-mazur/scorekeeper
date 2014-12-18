@@ -13,9 +13,13 @@
 
     viewModel.addScore = function (formElement) {
         var score = {
-            ScorePoints: viewModel.newScore.ScorePoints(),
-            UserId: viewModel.newScore.UserId()
+            ScorePoints: parseInt(viewModel.newScore.ScorePoints()),
+            UserId: parseInt(viewModel.newScore.UserId())
         };
+
+        ajaxHelper(scoresUri, 'POST', score).done(function () {
+            /* Todo */
+        });
     };
 
     function getAllScores () {
@@ -38,7 +42,7 @@
             contentType: 'application/json',
             data: data ? JSON.stringify(data) : null
         }).fail(function () {
-
+            /* Todo */
         });
     }
 

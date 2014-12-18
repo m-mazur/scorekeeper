@@ -17,7 +17,7 @@ namespace ScoreKeeper.Repositories
     
         public IEnumerable<Score> GetAllScores()
         {
-            var sqlCmd = "SELECT * FROM Scores INNER JOIN Users ON Scores.UserId = Users.UserId";
+            var sqlCmd = "SELECT * FROM Scores INNER JOIN Users ON Scores.UserId = Users.UserId ORDER BY ScoreDate DESC";
             return this.db.Query<Score>(sqlCmd);
         }
 
@@ -36,7 +36,7 @@ namespace ScoreKeeper.Repositories
             this.db.Query<Score>(sqlCmd, 
                 new { 
                     scorePoints = score.ScorePoints, 
-                    scoreDate = new DateTime(), 
+                    scoreDate = DateTime.Now, 
                     userId = score.UserId
                 });
         }
