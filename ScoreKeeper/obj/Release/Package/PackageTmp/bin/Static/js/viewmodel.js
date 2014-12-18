@@ -1,6 +1,14 @@
-﻿var ViewModel = function() {
-    var self = this;
-    self.hello = ko.observable("hello");
-};
+﻿(function () {
+    var uri = "/api/Scores/";
 
-ko.applyBindings(ViewModel());
+    var viewModel = {
+        scores: ko.observableArray()
+    };
+
+    $.getJSON(uri)
+    .done(function (data) {
+        viewModel.scores(data);
+    });
+
+    ko.applyBindings(viewModel);
+})();
