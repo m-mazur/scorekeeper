@@ -11,7 +11,7 @@
         }
     };
 
-    viewModel.addScore = function (formElement) {
+    viewModel.addScore = function () {
         var score = {
             ScorePoints: parseInt(viewModel.newScore.ScorePoints()),
             UserId: parseInt(viewModel.newScore.UserId())
@@ -28,7 +28,7 @@
         });
     }
 
-    function getAllUsers() {
+    function getAllUsers () {
         ajaxHelper(usersUri, 'GET').done(function (data) {
             viewModel.users(data);
         });

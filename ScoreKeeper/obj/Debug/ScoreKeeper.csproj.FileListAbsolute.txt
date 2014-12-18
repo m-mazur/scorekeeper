@@ -331,3 +331,4 @@ C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKee
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootstrap\less\utilities.less
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootstrap\less\variables.less
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootstrap\less\wells.less
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\style\style.css

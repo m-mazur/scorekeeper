@@ -11,11 +11,15 @@
         }
     };
 
-    viewModel.addScore = function (formElement) {
+    viewModel.addScore = function () {
         var score = {
-            ScorePoints: viewModel.newScore.ScorePoints(),
-            UserId: viewModel.newScore.UserId()
+            ScorePoints: parseInt(viewModel.newScore.ScorePoints()),
+            UserId: parseInt(viewModel.newScore.UserId())
         };
+
+        ajaxHelper(scoresUri, 'POST', score).done(function () {
+            /* Todo */
+        });
     };
 
     function getAllScores () {
@@ -24,7 +28,7 @@
         });
     }
 
-    function getAllUsers() {
+    function getAllUsers () {
         ajaxHelper(usersUri, 'GET').done(function (data) {
             viewModel.users(data);
         });
@@ -38,7 +42,7 @@
             contentType: 'application/json',
             data: data ? JSON.stringify(data) : null
         }).fail(function () {
-
+            /* Todo */
         });
     }
 

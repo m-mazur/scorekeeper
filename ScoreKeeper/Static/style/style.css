@@ -1,0 +1,34 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    color: #414141;
+    font-size: 30px;
+    text-transform: uppercase;
+    height: 60px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+section {
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.add-result h2 {
+    margin-bottom: 40px;
+}
+
+.add-result button {
+    width: 100%;
+}
+
+.add-result span {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 5px;
+}
