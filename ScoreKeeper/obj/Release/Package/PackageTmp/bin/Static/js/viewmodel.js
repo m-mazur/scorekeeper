@@ -5,7 +5,7 @@
     var viewModel = {
         scores: ko.observableArray(),
         users: ko.observableArray(),
-        leaderBoard: ko.observableArray(),
+        leaderboard: ko.observableArray(),
         scoresOptions: ko.observableArray([
             { option: 1 },
             { option: 2 },
@@ -38,17 +38,29 @@
         });
     };
 
-   function leaderBoard (){
-        var board = _.groupBy(viewModel.scores(), function(score) {
-            return score.UserId;
+    function createLeaderboard() {
+        var groupedScores = _.groupBy(viewModel.scores(), function (score) {
+            return score.UserName;
         });
-       console.log(board);
+
+        var mappedScores = _.chain(groupedScores).map(function (board, key) {
+            return {
+                UserName: key,
+                ScorePoints: _.reduce((_.pluck(board, "ScorePoints")), function (result, current) {
+                    return result + current;
+                })
+            }
+        }).value();
+
+        return (_.sortBy(mappedScores, function(list) {
+            return list.ScorePoints;
+        })).reverse();
     };
 
     function getAllScores () {
         ajaxHelper(scoresUri, 'GET').done(function (data) {
             viewModel.scores(data);
-            leaderBoard();
+            viewModel.leaderboard(createLeaderboard());
         });
     }
 

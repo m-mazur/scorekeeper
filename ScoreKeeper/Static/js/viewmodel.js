@@ -59,7 +59,9 @@
 
     function getAllScores () {
         ajaxHelper(scoresUri, 'GET').done(function (data) {
-            viewModel.scores(data);
+            viewModel.scores(_.sortBy(data, function(list) {
+                return Date.parse(list.ScoreDate);
+            }).reverse());
             viewModel.leaderboard(createLeaderboard());
         });
     }
