@@ -332,3 +332,14 @@ C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKee
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootstrap\less\variables.less
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootstrap\less\wells.less
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\style\style.css
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\.gitignore
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\underscore-min.js
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\underscore.js
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\.bower.json
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\.eslintrc
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\bower.json
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\component.json
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\LICENSE
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\package.json
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\README.md
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\underscore\underscore-min.map
