@@ -11,5 +11,7 @@ namespace ScoreKeeper.Repositories
     {
         IEnumerable<Score> GetAllScores();
         Score GetScore(int id);
+        void AddScore(Score score);
+        void DeleteScore(int id);
     }
 }

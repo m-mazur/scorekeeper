@@ -47,5 +47,18 @@ namespace ScoreKeeper.Controllers
 
             scoreRepository.AddScore(score);
         }
+
+        // DELETE api/Scores/5
+        public void DeleteScore(int id)
+        {
+            Score score = scoreRepository.GetScore(id);
+
+            if (score == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+
+            scoreRepository.DeleteScore(score.ScoreId);
+        }
     }
 }

@@ -7,19 +7,19 @@
         users: ko.observableArray(),
         leaderboard: ko.observableArray(),
         scoresOptions: ko.observableArray([
-            { option: 1 },
-            { option: 2 },
-            { option: 3 },
-            { option: 4 },
-            { option: 5 },
-            { option: 6 },
-            { option: 7 },
-            { option: 8 },
-            { option: 9 },
-            { option: 10 },
-            { option: 11 },
-            { option: 12 },
-            { option: 13 }
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
         ]),
         newScore: {
             ScorePoints: ko.observable("1"),
@@ -27,14 +27,23 @@
         }
     };
 
-    viewModel.addScore = function () {
+    viewModel.addScore = function (formElement) {
         var score = {
             ScorePoints: parseInt(viewModel.newScore.ScorePoints()),
             UserId: parseInt(viewModel.newScore.UserId())
         };
 
+        console.log("hej");
+
         ajaxHelper(scoresUri, 'POST', score).done(function () {
-            /* Todo */
+           /* Todo */
+        });
+    };
+
+    viewModel.deleteScore = function (score) {
+        ajaxHelper(scoresUri + score.ScoreId, 'DELETE').done(function () {
+            viewModel.scores.remove(score);
+            viewModel.leaderboard(createLeaderboard());
         });
     };
 
@@ -60,8 +69,8 @@
     function getAllScores () {
         ajaxHelper(scoresUri, 'GET').done(function (data) {
             viewModel.scores(_.sortBy(data, function(list) {
-                return list.scoreDate.getTime();
-            }));
+                return Date.parse(list.ScoreDate);
+            }).reverse());
             viewModel.leaderboard(createLeaderboard());
         });
     }

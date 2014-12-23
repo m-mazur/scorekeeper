@@ -22,8 +22,8 @@
         <section class="add-result">
             <h2>Lägg till nytt resultat</h2>
             <form data-bind="submit: addScore" role="form">
-                <span>Användare</span><select class ="btn btn dropdown-toggle" data-bind="options: users, optionsText: 'UserName', optionsValue: 'UserId', value: newScore.UserId"></select>
-                <span>Poäng</span><select class="btn btn dropdown-toggle" data-bind="options: scoresOptions, optionsText: 'option', value: newScore.ScoreId"></select>
+                <p>Användare</p><select class ="btn btn dropdown-toggle" data-bind="options: users, optionsText: 'UserName', optionsValue: 'UserId', value: newScore.UserId"></select><br />
+                <p>Poäng</p><select class="btn btn dropdown-toggle" data-bind="options: scoresOptions, value: newScore.ScorePoints"></select><br />
                 <button type="submit" class="btn btn-success">Lägg till resultat</button>
             </form>
         </section>

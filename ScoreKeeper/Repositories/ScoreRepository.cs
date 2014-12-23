@@ -40,5 +40,15 @@ namespace ScoreKeeper.Repositories
                     userId = score.UserId
                 });
         }
+
+        public void DeleteScore(int id)
+        {
+            var sqlCmd = "DELETE FROM dbo.Scores WHERE ScoreId = @scoreId";
+            this.db.Query<Score>(sqlCmd,
+                new
+                {
+                    scoreId = id
+                });
+        }
     }
 }

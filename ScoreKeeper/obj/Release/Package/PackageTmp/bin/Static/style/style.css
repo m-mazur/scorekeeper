@@ -25,11 +25,17 @@ section {
 
 .add-result button {
     width: 100%;
+    margin-top: 30px;
 }
 
-.add-result span {
+.add-result input {
+    margin-top: 30px;
+}
+
+.add-result p {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
     margin-right: 5px;
+    margin-top: 30px;
 }
