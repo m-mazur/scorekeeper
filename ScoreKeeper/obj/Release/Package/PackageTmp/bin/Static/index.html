@@ -24,6 +24,7 @@
             <form data-bind="submit: addScore" role="form">
                 <p>Användare</p><select class ="btn btn dropdown-toggle" data-bind="options: users, optionsText: 'UserName', optionsValue: 'UserId', value: newScore.UserId"></select><br />
                 <p>Poäng</p><select class="btn btn dropdown-toggle" data-bind="options: scoresOptions, value: newScore.ScorePoints"></select><br />
+
                 <button type="submit" class="btn btn-success">Lägg till resultat</button>
             </form>
         </section>
@@ -65,6 +66,7 @@
                         <td data-bind="text: UserName"></td>
                         <td data-bind="text: ScorePoints"></td>
                         <td data-bind="text: moment(ScoreDate).format('DD/MM/YYYY')"></td>
+                        <td><button class="btn btn-danger" data-bind="click: $parent.deleteScore">Ta bort</button></td>
                     </tr>
                 </tbody>
             </table>

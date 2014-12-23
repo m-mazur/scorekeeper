@@ -27,13 +27,23 @@
         }
     };
 
-    viewModel.addScore = function () {
+    viewModel.addScore = function (formElement) {
         var score = {
             ScorePoints: parseInt(viewModel.newScore.ScorePoints()),
             UserId: parseInt(viewModel.newScore.UserId())
         };
+
+        console.log("hej");
+
         ajaxHelper(scoresUri, 'POST', score).done(function () {
-            /* Todo */
+           /* Todo */
+        });
+    };
+
+    viewModel.deleteScore = function (score) {
+        ajaxHelper(scoresUri + score.ScoreId, 'DELETE').done(function () {
+            viewModel.scores.remove(score);
+            viewModel.leaderboard(createLeaderboard());
         });
     };
 
