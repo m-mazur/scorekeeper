@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d2a4065-2741-409b-8da3-55931ba21cdb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bin/ScoreKeeper.dll" afterPath="$PROJECT_DIR$/../bin/ScoreKeeper.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Debug/ScoreKeeper.dll" afterPath="$PROJECT_DIR$/../obj/Debug/ScoreKeeper.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Release/ScoreKeeper.dll" afterPath="$PROJECT_DIR$/../obj/Release/ScoreKeeper.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/bin/ScoreKeeper.dll" afterPath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/bin/ScoreKeeper.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../bin/ScoreKeeper.pdb" afterPath="$PROJECT_DIR$/../bin/ScoreKeeper.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Debug/ScoreKeeper.pdb" afterPath="$PROJECT_DIR$/../obj/Debug/ScoreKeeper.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Release/ScoreKeeper.pdb" afterPath="$PROJECT_DIR$/../obj/Release/ScoreKeeper.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/App_Data/ScoreKeeperContext-20141216161513.mdf" afterPath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/App_Data/ScoreKeeperContext-20141216161513.mdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/App_Data/ScoreKeeperContext-20141216161513_log.ldf" afterPath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/App_Data/ScoreKeeperContext-20141216161513_log.ldf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Repositories/ScoreRepository.cs" afterPath="$PROJECT_DIR$/../Repositories/ScoreRepository.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Repositories/UsersRepository.cs" afterPath="$PROJECT_DIR$/../Repositories/UsersRepository.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/Static/index.html" afterPath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/Static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/bin/Static/index.html" afterPath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/bin/Static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viewmodel.js" afterPath="$PROJECT_DIR$/js/viewmodel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/Static/js/viewmodel.js" afterPath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/Static/js/viewmodel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/bin/Static/js/viewmodel.js" afterPath="$PROJECT_DIR$/../obj/Release/Package/PackageTmp/bin/Static/js/viewmodel.js" />
     </list>
     <ignored path="Static.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1394">
-              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+            <state vertical-scroll-proportion="-12.153846" vertical-offset="874" max-vertical-offset="1411">
+              <caret line="70" column="136" selection-start-line="70" selection-start-column="136" selection-end-line="70" selection-end-column="136" />
               <folding />
             </state>
           </provider>
@@ -65,8 +49,8 @@
       <file leaf-file-name="viewmodel.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/viewmodel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84794277" vertical-offset="121" max-vertical-offset="2057">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state vertical-scroll-proportion="-1.6762075" vertical-offset="1498" max-vertical-offset="2057">
+              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -257,8 +241,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34340045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -266,6 +250,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22135103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -273,11 +259,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -479,16 +463,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1394">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        <state vertical-scroll-proportion="-12.153846" vertical-offset="874" max-vertical-offset="1411">
+          <caret line="70" column="136" selection-start-line="70" selection-start-column="136" selection-end-line="70" selection-end-column="136" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/viewmodel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84794277" vertical-offset="121" max-vertical-offset="2057">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        <state vertical-scroll-proportion="-1.6762075" vertical-offset="1498" max-vertical-offset="2057">
+          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
           <folding />
         </state>
       </provider>

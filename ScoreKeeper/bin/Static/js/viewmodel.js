@@ -1,6 +1,7 @@
 ﻿(function () {
-    var scoresUri = "/api/Scores/";
-    var usersUri = "/api/Users/";
+    var scoresUri = "/api/Scores/GetScore";
+    var usersUri = "/api/Users/GetUsers";
+    var latestScoreUri = "/api/Scores/GetLatestScore";
 
     var viewModel = {
         scores: ko.observableArray(),
@@ -77,6 +78,12 @@
         });
     }
 
+    function getLatestScore() {
+        ajaxHelper(latestScoreUri, 'GET').done(function (data) {
+            viewModel.scores.push(score);
+        })
+    }
+
     function ajaxHelper(uri, method, data) {
         return $.ajax({
             type: method,
@@ -99,6 +106,7 @@
                     className: "btn-success",
                     callback: function () {
                         ajaxHelper(uri, method, data);
+                        getLatestScore();
                     }
                 },
                 danger: {

@@ -60,6 +60,7 @@
                         <th>Användare</th>
                         <th>Poäng</th>
                         <th>Datum</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody data-bind="foreach: scores">
@@ -67,7 +68,7 @@
                         <td data-bind="text: UserName"></td>
                         <td data-bind="text: ScorePoints"></td>
                         <td data-bind="text: moment(ScoreDate).format('DD/MM/YYYY')"></td>
-                        <td><button class="btn btn-danger" data-bind="click: $parent.deleteScore">Ta bort</button></td>
+                        <td><button class="btn btn-danger" data-bind="click: $parent.deleteScore"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
                     </tr>
                 </tbody>
             </table>

@@ -33,11 +33,7 @@
             UserId: parseInt(viewModel.newScore.UserId())
         };
 
-        console.log("hej");
-
-        ajaxHelper(scoresUri, 'POST', score).done(function () {
-           /* Todo */
-        });
+        ajaxHelperWithBootBox(scoresUri, 'POST', score,  'Vill du lägga till poäng?');
     };
 
     viewModel.deleteScore = function (score) {
@@ -90,6 +86,26 @@
             data: data ? JSON.stringify(data) : null
         }).fail(function () {
             /* Todo */
+        });
+    }
+
+    function ajaxHelperWithBootBox(uri, method, data, message) {
+        bootbox.dialog({
+            title: 'Bekräfta',
+            message: message,
+            buttons: {
+                success: {
+                    label: "Ja!",
+                    className: "btn-success",
+                    callback: function () {
+                        ajaxHelper(uri, method, data);
+                    }
+                },
+                danger: {
+                    label: "Nej!",
+                    className: "btn-danger"
+                }
+            }
         });
     }
 
