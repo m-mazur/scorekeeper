@@ -18,13 +18,13 @@ namespace ScoreKeeper.Controllers
     {
         private ScoreRepository scoreRepository = new ScoreRepository();
 
-        // GET api/Scores
-        public IEnumerable<Score> GetScores()
+        // GET api/Scores/GetScores
+        public IEnumerable<Score> GetScore()
         {
             return scoreRepository.GetAllScores();
         }
 
-        // GET api/Scores/5
+        // GET api/Scores/GetScores/5
         public Score GetScore(int id)
         {
             Score score = scoreRepository.GetScore(id);
@@ -37,7 +37,20 @@ namespace ScoreKeeper.Controllers
             return scoreRepository.GetScore(id);
         }
 
-        // POST api/Scores
+        // GET api/Scores/GetLatestScore
+        public Score GetLatestScore()
+        {
+            Score score = scoreRepository.GetLatestScore();
+
+            if (score == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+
+            return scoreRepository.GetLatestScore();
+        }
+
+        // POST api/Scores/PostScore
         public void PostScore(Score score)
         {
             if (!ModelState.IsValid)
@@ -48,7 +61,7 @@ namespace ScoreKeeper.Controllers
             scoreRepository.AddScore(score);
         }
 
-        // DELETE api/Scores/5
+        // DELETE api/Scores/DeleteScore/5
         public void DeleteScore(int id)
         {
             Score score = scoreRepository.GetScore(id);

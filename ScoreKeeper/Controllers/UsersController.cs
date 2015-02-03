@@ -12,7 +12,7 @@ namespace ScoreKeeper.Controllers
     {
         private UsersRepository userRepository = new UsersRepository();
 
-        //GET api/Users
+        //GET api/Users/GetUsers
         public IEnumerable<User> GetUsers()
         {
             return userRepository.GetAllUsers();
