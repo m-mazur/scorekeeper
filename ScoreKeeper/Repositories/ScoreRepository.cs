@@ -30,6 +30,12 @@ namespace ScoreKeeper.Repositories
                 }).FirstOrDefault();
         }
 
+        public Score GetLatestScore()
+        {
+            var sqlCmd = "SELECT * FROM Scores INNER JOIN Users ON Scores.UserId = Users.UserId WHERE Scores.ScoreId = (SELECT TOP 1 ScoreId FROM Scores ORDER BY ScoreId DESC)";
+            return this.db.Query<Score>(sqlCmd).FirstOrDefault();
+        }
+
         public void AddScore(Score score) 
         {
             var sqlCmd = "INSERT INTO dbo.Scores (ScorePoints, ScoreDate, UserId) VALUES(@scorePoints, @scoreDate, @userId)";
