@@ -107,8 +107,9 @@
                     label: "Ja!",
                     className: "btn-success",
                     callback: function () {
-                        ajaxHelper(uri, method, data);
-                        getLatestScore();
+                        ajaxHelper(uri, method, data).done(function () {
+                            getLatestScore();
+                        });
                     }
                 },
                 danger: {
