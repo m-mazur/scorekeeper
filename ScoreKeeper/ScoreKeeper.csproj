@@ -158,7 +158,8 @@
     <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Repositories\ScoreRepository.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
-    <Compile Include="ViewModels\GetScoresViewModel.cs" />
+    <Compile Include="ViewModels\GetAllScoresViewModel.cs" />
+    <Compile Include="ViewModels\GetLatestScoreViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\ScoreKeeperContext-20141216161513.mdf" />
@@ -184,6 +185,7 @@
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\PublishProfiles\StryktipsetScoreKeeper - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\StryktipsetScoreKeeper - Web Deploy.pubxml">
       <SubType>Designer</SubType>

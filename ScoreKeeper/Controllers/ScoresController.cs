@@ -18,26 +18,36 @@ namespace ScoreKeeper.Controllers
 
     public class ScoresController : ApiController
     {
-        private ScoreRepository scoreRepository = new ScoreRepository();
-        private GetScoresViewModel getScoresViewModel = new GetScoresViewModel();
+        private ScoreRepository scoreRepository;
+        private GetAllScoresViewModel getAllScoresViewModel;
+        private GetLatestScoreViewModel getLatestScoreViewModel;
+
+        public ScoresController()
+        {
+            scoreRepository = new ScoreRepository();
+            getAllScoresViewModel = new GetAllScoresViewModel();
+            getLatestScoreViewModel = new GetLatestScoreViewModel();
+        }
 
         // GET api/Scores/GetAllScores
-        public IEnumerable<GetScoresViewModel> GetAllScores()
+        public IEnumerable<GetAllScoresViewModel> GetAllScores()
         {
-            if (getScoresViewModel.GetAllScores() == null)
+            IEnumerable<GetAllScoresViewModel> allScores = getAllScoresViewModel.GetAllScores();
+           
+            if (allScores == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            return getScoresViewModel.GetAllScores();
+            return allScores;
         }
 
         // GET api/Scores/GetLatestScore
         public Score GetLatestScore()
         {
-            Score score = scoreRepository.GetLatestScore();
+            GetLatestScoreViewModel latestScore = getLatestScoreViewModel.GetScore();
 
-            if (score == null)
+            if (latestScore == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
