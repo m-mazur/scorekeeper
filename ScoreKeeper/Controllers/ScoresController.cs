@@ -11,30 +11,31 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using ScoreKeeper.Models;
 using ScoreKeeper.Repositories;
+using ScoreKeeper.ViewModels;
 
 namespace ScoreKeeper.Controllers
 {
+
     public class ScoresController : ApiController
     {
         private ScoreRepository scoreRepository = new ScoreRepository();
+        private GetScoresViewModel getScoresViewModel = new GetScoresViewModel();
+
+        // GET api/Scores/GetAllScores
+        public IEnumerable<GetScoresViewModel> GetAllScores()
+        {
+            if (getScoresViewModel.GetAllScores() == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+
+            return getScoresViewModel.GetAllScores();
+        }
 
         // GET api/Scores/GetScores
         public IEnumerable<Score> GetScore()
         {
             return scoreRepository.GetAllScores();
-        }
-
-        // GET api/Scores/GetScores/5
-        public Score GetScore(int id)
-        {
-            Score score = scoreRepository.GetScore(id);
-
-            if (score == null)
-            {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            }
-
-            return scoreRepository.GetScore(id);
         }
 
         // GET api/Scores/GetLatestScore

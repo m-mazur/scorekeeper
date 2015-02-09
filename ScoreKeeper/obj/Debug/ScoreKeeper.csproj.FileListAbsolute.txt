@@ -353,3 +353,8 @@ C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKee
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootbox\LICENSE.md
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootbox\package.json
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootbox\README.md
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\AutoMapper.Net4.dll
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\AutoMapper.dll
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\AutoMapper.pdb
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\AutoMapper.xml
+C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\AutoMapper.Net4.pdb

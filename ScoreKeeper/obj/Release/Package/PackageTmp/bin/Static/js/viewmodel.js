@@ -1,6 +1,9 @@
 ﻿(function () {
-    var scoresUri = "/api/Scores/";
-    var usersUri = "/api/Users/";
+    var scoresUri = "/api/Scores/GetScore";
+    var usersUri = "/api/Users/GetUsers";
+    var latestScoreUri = "/api/Scores/GetLatestScore";
+    var postScoreUri = "/api/Scores/PostScore";
+    var deleteScoreUri = "/api/Scores/DeleteScore/";
 
     var viewModel = {
         scores: ko.observableArray(),
@@ -33,11 +36,11 @@
             UserId: parseInt(viewModel.newScore.UserId())
         };
 
-        ajaxHelperWithBootBox(scoresUri, 'POST', score,  'Vill du lägga till poäng?');
+        ajaxHelperWithBootBox(postScoreUri, 'POST', score,  'Vill du lägga till poäng?');
     };
 
     viewModel.deleteScore = function (score) {
-        ajaxHelper(scoresUri + score.ScoreId, 'DELETE').done(function () {
+        ajaxHelper(deleteScoreUri + score.ScoreId, 'DELETE').done(function () {
             viewModel.scores.remove(score);
             viewModel.leaderboard(createLeaderboard());
         });
@@ -77,6 +80,12 @@
         });
     }
 
+    function getLatestScore() {
+        ajaxHelper(latestScoreUri, 'GET').done(function (data) {
+            viewModel.scores.unshift(data);
+        })
+    }
+
     function ajaxHelper(uri, method, data) {
         return $.ajax({
             type: method,
@@ -98,7 +107,9 @@
                     label: "Ja!",
                     className: "btn-success",
                     callback: function () {
-                        ajaxHelper(uri, method, data);
+                        ajaxHelper(uri, method, data).done(function () {
+                            getLatestScore();
+                        });
                     }
                 },
                 danger: {
