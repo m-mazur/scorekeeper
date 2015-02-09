@@ -8,7 +8,9 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="bower_components/bootbox/bootbox.js"></script>
-    <script src="js/viewmodel.js" defer="defer"></script>
+    <script src="js/results-viewmodel.js" defer="defer"></script>
+    <script src="js/new-viewmodel.js" defer="defer"></script>
+    <!--<script src="js/viewmodel.js" defer="defer"></script>-->
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="style/style.css" />
@@ -22,17 +24,17 @@
     <div class="col-md-4">
         <section class="add-result">
             <h2>Lägg till nytt resultat</h2>
-            <form data-bind="submit: addScore" role="form">
+            <!-- <form data-bind="submit: addScore" role="form">
                 <p>Användare</p><select class ="btn btn dropdown-toggle" data-bind="options: users, optionsText: 'UserName', optionsValue: 'UserId', value: newScore.UserId"></select><br />
                 <p>Poäng</p><select class="btn btn dropdown-toggle" data-bind="options: scoresOptions, value: newScore.ScorePoints"></select><br />
 
                 <button type="submit" class="btn btn-success">Lägg till resultat</button>
-            </form>
+            </form>-->
         </section>
     </div>
 
     <div class="col-md-4">
-        <section class="´leaderboard">
+        <!--<section class="´leaderboard">
             <h2>Tabell</h2>
             <table class="table">
                 <thead>
@@ -47,7 +49,7 @@
                         <td data-bind="text: ScorePoints"></td>
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
         </section>
     </div>
 

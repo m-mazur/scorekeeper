@@ -43,7 +43,7 @@ namespace ScoreKeeper.Controllers
         }
 
         // GET api/Scores/GetLatestScore
-        public Score GetLatestScore()
+        public GetLatestScoreViewModel GetLatestScore()
         {
             GetLatestScoreViewModel latestScore = getLatestScoreViewModel.GetScore();
 
@@ -52,7 +52,7 @@ namespace ScoreKeeper.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            return scoreRepository.GetLatestScore();
+            return latestScore;
         }
 
         // POST api/Scores/PostScore
