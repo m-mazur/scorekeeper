@@ -32,12 +32,6 @@ namespace ScoreKeeper.Controllers
             return getScoresViewModel.GetAllScores();
         }
 
-        // GET api/Scores/GetScores
-        public IEnumerable<Score> GetScore()
-        {
-            return scoreRepository.GetAllScores();
-        }
-
         // GET api/Scores/GetLatestScore
         public Score GetLatestScore()
         {
