@@ -20,7 +20,6 @@ namespace ScoreKeeper
                 new MediaTypeHeaderValue("text/html")
             );
 
-
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{action}/{id}",
