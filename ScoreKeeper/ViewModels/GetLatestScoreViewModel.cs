@@ -24,6 +24,7 @@ namespace ScoreKeeper.ViewModels
         }
 
         public string UserName { get; set; }
+        public int ScoreId { get; set; }
         public int ScorePoints { get; set; }
         public DateTime ScoreDate { get; set; }
     }
