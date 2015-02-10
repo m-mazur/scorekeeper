@@ -83,6 +83,7 @@
     function getLatestScore() {
         ajaxHelper(latestScoreUri, 'GET').done(function (data) {
             viewModel.scores.unshift(data);
+            viewModel.leaderboard(createLeaderboard());
         })
     }
 

@@ -2,8 +2,12 @@
     function ViewModel(resultsViewModel) {
         var self = this;
 
-        self.scores = ko.observableArray(resultsViewModel.get());
+        resultsViewModel.then(function (data) {
+            
+        });
+
+        self.scores = ko.observableArray(resultsViewModel);
 
     }
-    ko.applyBindings(ViewModel(ResultsViewModel));
+    ko.applyBindings(ViewModel(ResultsViewModel.get()));
 }());
