@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using ScoreKeeper.Models;
-using ScoreKeeper.Repositories;
 using ScoreKeeper.ViewModels;
 
 namespace ScoreKeeper.Controllers
@@ -18,7 +13,6 @@ namespace ScoreKeeper.Controllers
 
     public class ScoresController : ApiController
     {
-        private ScoreRepository scoreRepository;
         private GetAllScoresViewModel getAllScoresViewModel;
         private GetLatestScoreViewModel getLatestScoreViewModel;
         private AddScoreViewModel addScoreViewModel;
@@ -27,7 +21,6 @@ namespace ScoreKeeper.Controllers
 
         public ScoresController()
         {
-            scoreRepository = new ScoreRepository();
             getAllScoresViewModel = new GetAllScoresViewModel();
             getLatestScoreViewModel = new GetLatestScoreViewModel();
             addScoreViewModel = new AddScoreViewModel();
