@@ -83,6 +83,7 @@
     function getLatestScore() {
         ajaxHelper(latestScoreUri, 'GET').done(function (data) {
             viewModel.scores.unshift(data);
+            viewModel.leaderboard(createLeaderboard());
         })
     }
 
@@ -109,7 +110,6 @@
                     callback: function () {
                         ajaxHelper(uri, method, data).done(function () {
                             getLatestScore();
-                            viewModel.leaderboard(createLeaderboard());
                         });
                     }
                 },

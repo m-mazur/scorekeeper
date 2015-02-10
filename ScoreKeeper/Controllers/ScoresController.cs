@@ -21,12 +21,14 @@ namespace ScoreKeeper.Controllers
         private ScoreRepository scoreRepository;
         private GetAllScoresViewModel getAllScoresViewModel;
         private GetLatestScoreViewModel getLatestScoreViewModel;
+        private AddScoreViewModel addScoreViewModel;
 
         public ScoresController()
         {
             scoreRepository = new ScoreRepository();
             getAllScoresViewModel = new GetAllScoresViewModel();
             getLatestScoreViewModel = new GetLatestScoreViewModel();
+            addScoreViewModel = new AddScoreViewModel();
         }
 
         // GET api/Scores/GetAllScores
@@ -56,14 +58,14 @@ namespace ScoreKeeper.Controllers
         }
 
         // POST api/Scores/PostScore
-        public void PostScore(Score score)
+        public void PostScore(AddScoreViewModel scoreViewModel)
         {
             if (!ModelState.IsValid)
             {
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
             }
 
-            scoreRepository.AddScore(score);
+            scoreViewModel.AddScore(scoreViewModel);
         }
 
         // DELETE api/Scores/DeleteScore/5

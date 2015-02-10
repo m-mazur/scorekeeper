@@ -9,8 +9,8 @@
     }
 
     function get() {
-        $.getJSON(allScoresUri).done(function (data) {
-            var mappedData = ko.utils.arrayMap(data, function(score) {
+        return $.getJSON(allScoresUri).done(function (data) {
+            var mappedData = ko.utils.arrayMap(data, function (score) {
                 return new Score(score.UserName, score.ScorePoints, score.ScoreDate);
             });
             return mappedData;
