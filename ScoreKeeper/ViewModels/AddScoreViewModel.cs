@@ -17,10 +17,10 @@ namespace ScoreKeeper.ViewModels
             scoreRepository = new ScoreRepository();
         }
 
-        public void AddScore(AddScoreViewModel scoreViewModel)
+        public void AddScore(AddScoreViewModel addScoreViewModel)
         {
             Mapper.CreateMap<AddScoreViewModel, Score>();
-            scoreRepository.AddScore(Mapper.Map<Score>(scoreViewModel));
+            scoreRepository.AddScore(Mapper.Map<Score>(addScoreViewModel));
         }
 
         public string ScorePoints { get; set; }

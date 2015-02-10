@@ -144,8 +144,10 @@
     <Compile Include="Repositories\ScoreRepository.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
     <Compile Include="ViewModels\AddScoreViewModel.cs" />
+    <Compile Include="ViewModels\DeleteScoreViewModel.cs" />
     <Compile Include="ViewModels\GetAllScoresViewModel.cs" />
     <Compile Include="ViewModels\GetLatestScoreViewModel.cs" />
+    <Compile Include="ViewModels\GetSingleScoreViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\ScoreKeeperContext-20141216161513.mdf" />

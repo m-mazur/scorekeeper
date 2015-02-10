@@ -22,6 +22,8 @@ namespace ScoreKeeper.Controllers
         private GetAllScoresViewModel getAllScoresViewModel;
         private GetLatestScoreViewModel getLatestScoreViewModel;
         private AddScoreViewModel addScoreViewModel;
+        private DeleteScoreViewModel deleteScoreViewModel;
+        private GetSingleScoreViewModel getSingleScoreViewModel;
 
         public ScoresController()
         {
@@ -29,6 +31,8 @@ namespace ScoreKeeper.Controllers
             getAllScoresViewModel = new GetAllScoresViewModel();
             getLatestScoreViewModel = new GetLatestScoreViewModel();
             addScoreViewModel = new AddScoreViewModel();
+            deleteScoreViewModel = new DeleteScoreViewModel();
+            getSingleScoreViewModel = new GetSingleScoreViewModel();
         }
 
         // GET api/Scores/GetAllScores
@@ -71,14 +75,14 @@ namespace ScoreKeeper.Controllers
         // DELETE api/Scores/DeleteScore/5
         public void DeleteScore(int id)
         {
-            Score score = scoreRepository.GetScore(id);
+            GetSingleScoreViewModel score = getSingleScoreViewModel.GetSingleScore(id);
 
             if (score == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            scoreRepository.DeleteScore(score.ScoreId);
+            deleteScoreViewModel.DeleteScore(id);
         }
     }
 }
