@@ -122,7 +122,6 @@
 
     getAllScores();
     getAllUsers();
-    AllScoresService.get();
 
     ko.applyBindings(viewModel);
 })();
