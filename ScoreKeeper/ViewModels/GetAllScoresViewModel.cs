@@ -10,11 +10,11 @@ namespace ScoreKeeper.ViewModels
 {
     public class GetAllScoresViewModel
     {
-        private ScoreRepository scoreRepository;
+        private IScoreRepository scoreRepository;
 
         public GetAllScoresViewModel()
         {
-            scoreRepository = new ScoreRepository();
+            this.scoreRepository = new ScoreRepository();
         }
        
         public IEnumerable<GetAllScoresViewModel> GetAllScores()

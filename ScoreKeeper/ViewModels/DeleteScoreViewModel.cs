@@ -10,11 +10,11 @@ namespace ScoreKeeper.ViewModels
 {
     public class DeleteScoreViewModel
     {
-        private ScoreRepository scoreRepository;
+        private IScoreRepository scoreRepository;
 
         public DeleteScoreViewModel()
         {
-            scoreRepository = new ScoreRepository();
+            this.scoreRepository = new ScoreRepository();
         }
 
         public void DeleteScore(int scoreId)

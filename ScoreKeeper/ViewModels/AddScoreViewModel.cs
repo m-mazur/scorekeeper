@@ -10,11 +10,11 @@ namespace ScoreKeeper.ViewModels
 {
     public class AddScoreViewModel
     {
-        private ScoreRepository scoreRepository;
+        private IScoreRepository scoreRepository;
 
         public AddScoreViewModel()
         {
-            scoreRepository = new ScoreRepository();
+            this.scoreRepository = new ScoreRepository();
         }
 
         public void AddScore(AddScoreViewModel addScoreViewModel)
