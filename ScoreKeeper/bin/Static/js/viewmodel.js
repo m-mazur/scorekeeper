@@ -109,6 +109,7 @@
                     callback: function () {
                         ajaxHelper(uri, method, data).done(function () {
                             getLatestScore();
+                            viewModel.leaderboard(createLeaderboard());
                         });
                     }
                 },
