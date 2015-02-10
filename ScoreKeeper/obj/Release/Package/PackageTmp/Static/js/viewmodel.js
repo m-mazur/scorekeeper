@@ -1,5 +1,5 @@
 ﻿(function () {
-    var scoresUri = "/api/Scores/GetScore";
+    var allScoresUri = "/api/Scores/GetAllScores"
     var usersUri = "/api/Users/GetUsers";
     var latestScoreUri = "/api/Scores/GetLatestScore";
     var postScoreUri = "/api/Scores/PostScore";
@@ -66,7 +66,7 @@
     };
 
     function getAllScores () {
-        ajaxHelper(scoresUri, 'GET').done(function (data) {
+        ajaxHelper(allScoresUri, 'GET').done(function (data) {
             viewModel.scores(_.sortBy(data, function(list) {
                 return Date.parse(list.ScoreDate);
             }).reverse());
