@@ -25,14 +25,19 @@
         }
 
         self.addScore = function (formElement) {
-            console.log("hej");
             var score = {
                 ScorePoints: parseInt(self.tempScore.ScorePoints()),
                 UserId: parseInt(self.tempScore.UserId())
             }
-
             addScoreViewModel.addScore(score);
+            addScoreViewModel.getLatestScore().done(function (data) {
+                self.scores.unshift(data);
+            });
         }
+
+        self.scores.subscribe(function (value) {
+            self.leaderboard(leaderBoardViewModel.createLeaderboard(value));
+        });
     }
 
     ko.applyBindings(ViewModel(new ResultsViewModel(), new LeaderBoardViewModel(), new AddScoreViewModel()));
