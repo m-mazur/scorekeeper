@@ -12,7 +12,7 @@
             self.leaderboard(leaderBoardViewModel.createLeaderboard(data));
         });;
 
-        addScoreViewModel.getAllUsers().done(function (data) {
+        leaderBoardViewModel.getAllUsers().done(function (data) {
            self.users(data);
         });
 

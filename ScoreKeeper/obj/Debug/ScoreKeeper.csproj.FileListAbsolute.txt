@@ -130,7 +130,6 @@ C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKee
 C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Dapper.dll
 C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Dapper.pdb
 C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Dapper.xml
-C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\js\viewmodel.js
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootstrap\dist\css\bootstrap-theme.css
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootstrap\dist\css\bootstrap-theme.min.css
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\Static\bower_components\bootstrap\dist\css\bootstrap.css
@@ -358,3 +357,9 @@ C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKee
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\AutoMapper.pdb
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\AutoMapper.xml
 C:\Users\Marcus Mazur\documents\visual studio 2013\Projects\ScoreKeeper\ScoreKeeper\bin\AutoMapper.Net4.pdb
+C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\app.addscore-viewmodel.js
+C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\app.helpers.js
+C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\app.leaderboard-viewmodel.js
+C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\app.results-viewmodel.js
+C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\app.viewmodel.js
+C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\old.viewmodel.js

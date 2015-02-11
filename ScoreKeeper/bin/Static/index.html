@@ -8,10 +8,12 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="bower_components/bootbox/bootbox.js"></script>
-    <script src="js/results-viewmodel.js" defer="defer"></script>
-    <script src="js/leaderboard-viewmodel.js" defer="defer"></script>
-    <script src="js/new-viewmodel.js" defer="defer"></script>
-    <!--<script src="js/viewmodel.js" defer="defer"></script>-->
+    <script src="js/app.helpers.js" defer="defer"></script>
+    <script src="js/app.results-viewmodel.js" defer="defer"></script>
+    <script src="js/app.addscore-viewmodel.js" defer="defer"></script>
+    <script src="js/app.leaderboard-viewmodel.js" defer="defer"></script>
+    <script src="js/app.viewmodel.js" defer="defer"></script>
+    <!--<script src="js/old.viewmodel.js" defer="defer"></script>-->
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="style/style.css" />
@@ -32,7 +34,7 @@
                 <button type="submit" class="btn btn-success">Lägg till resultat</button>
             </form>
         </section>
-    </div>
+    </div>-->
 
     <div class="col-md-4">
         <section class="´leaderboard">
@@ -71,11 +73,11 @@
                         <td data-bind="text: UserName"></td>
                         <td data-bind="text: ScorePoints"></td>
                         <td data-bind="text: moment(ScoreDate).format('DD/MM/YYYY')"></td>
-                        <td><button class="btn btn-danger" data-bind="click: $parent.deleteScore"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+                        <td><button class="btn btn-danger" data-bind="click: deleteScore"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
                     </tr>
                 </tbody>
             </table>
         </section>
-    </div>-->
+    </div>
 </body>
 </html>
