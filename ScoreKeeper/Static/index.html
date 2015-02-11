@@ -27,12 +27,12 @@
     <div class="col-md-4">
         <section class="add-result">
             <h2>Lägg till nytt resultat</h2>
-            <!--<form data-bind="submit: addScore" role="form">-->
-                <p>Användare</p><select class ="btn btn dropdown-toggle" data-bind="options: users, optionsText: 'UserName', optionsValue: 'UserId', value: newScore.UserId"></select><br />
-                <!--<p>Poäng</p><select class="btn btn dropdown-toggle" data-bind="options: scoresOptions, value: newScore.ScorePoints"></select><br />
+            <form data-bind="submit: addScore" role="form">
+                <p>Användare</p><select class="btn btn dropdown-toggle" data-bind="options: users, optionsText: 'UserName', optionsValue: 'UserId', value: tempScore.UserId"></select><br />
+                <p>Poäng</p><select class="btn btn dropdown-toggle" data-bind="options: scoresOptions, value: tempScore.ScorePoints"></select><br />
 
                 <button type="submit" class="btn btn-success">Lägg till resultat</button>
-            </form>-->
+            </form>
         </section>
     </div>
 
