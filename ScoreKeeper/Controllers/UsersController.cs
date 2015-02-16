@@ -23,7 +23,6 @@ namespace ScoreKeeper.Controllers
         //GET api/Users/GetUsers
         public IEnumerable<GetAllUsersViewModel> GetUsers()
         {
-            Mapper.CreateMap<User, GetAllUsersViewModel>();
             var allUsers = Mapper.Map<IEnumerable<GetAllUsersViewModel>>(userRepository.GetAllUsers());
 
             if (allUsers == null) 

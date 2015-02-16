@@ -26,7 +26,6 @@ namespace ScoreKeeper.Controllers
         // GET api/Scores/GetAllScores
         public IEnumerable<GetAllScoresViewModel> GetAllScores()
         {
-            Mapper.CreateMap<Score, GetAllScoresViewModel>();
             var allScores = Mapper.Map<IEnumerable<GetAllScoresViewModel>>(scoreRepository.GetAllScores());
            
             if (allScores == null)
@@ -40,8 +39,6 @@ namespace ScoreKeeper.Controllers
         // GET api/Scores/GetLatestScore
         public GetLatestScoreViewModel GetLatestScore()
         {
-
-            Mapper.CreateMap<Score, GetLatestScoreViewModel>();
             var latestScore = Mapper.Map<GetLatestScoreViewModel>(scoreRepository.GetLatestScore());
 
             if (latestScore == null)
@@ -66,7 +63,6 @@ namespace ScoreKeeper.Controllers
         // DELETE api/Scores/DeleteScore/5
         public void DeleteScore(int id)
         {
-            Mapper.CreateMap<Score, GetSingleScoreViewModel>();
             var score = Mapper.Map<GetSingleScoreViewModel>(scoreRepository.GetScore(id));
 
             if (score == null)
