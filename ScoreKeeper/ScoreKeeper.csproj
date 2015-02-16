@@ -142,8 +142,6 @@
     <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Repositories\ScoreRepository.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
-    <Compile Include="ViewModels\AddScoreViewModel.cs" />
-    <Compile Include="ViewModels\DeleteScoreViewModel.cs" />
     <Compile Include="ViewModels\GetAllScoresViewModel.cs" />
     <Compile Include="ViewModels\GetAllUsersViewModel.cs" />
     <Compile Include="ViewModels\GetLatestScoreViewModel.cs" />

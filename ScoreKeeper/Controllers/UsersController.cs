@@ -8,22 +8,23 @@ using ScoreKeeper.Models;
 using ScoreKeeper.Repositories;
 using ScoreKeeper.ViewModels;
 using System.Net;
+using AutoMapper;
 
 namespace ScoreKeeper.Controllers
 {
     public class UsersController : ApiController
     {
-        private GetAllUsersViewModel getAllUsersViewModel;
-
+        private IUserRepository userRepository;
         public UsersController() 
         {
-            getAllUsersViewModel = new GetAllUsersViewModel();
+            userRepository = new UsersRepository();
         }
 
         //GET api/Users/GetUsers
         public IEnumerable<GetAllUsersViewModel> GetUsers()
         {
-            IEnumerable<GetAllUsersViewModel> allUsers = getAllUsersViewModel.GetAllUsers();
+            Mapper.CreateMap<User, GetAllUsersViewModel>();
+            var allUsers = Mapper.Map<IEnumerable<GetAllUsersViewModel>>(userRepository.GetAllUsers());
 
             if (allUsers == null) 
             {

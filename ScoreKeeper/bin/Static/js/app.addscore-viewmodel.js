@@ -1,6 +1,7 @@
 function AddScoreViewModel() {
     var postScoreUri = "/api/Scores/PostScore";
     var getAllUsersUri = "/api/Users/GetUsers";
+    var latestScoreUri = "/api/Scores/GetLatestScore";
 
     var self = this;
     var helper = new Helper();
@@ -21,5 +22,9 @@ function AddScoreViewModel() {
 
     self.addScore = function (score) {
         return helper.ajaxHelper(postScoreUri, 'POST', score);
+    }
+
+    self.getLatestScore = function () {
+        return helper.ajaxHelper(latestScoreUri, 'GET');
     }
 }

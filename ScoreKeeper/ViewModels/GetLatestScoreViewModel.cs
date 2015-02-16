@@ -10,19 +10,6 @@ namespace ScoreKeeper.ViewModels
 {
     public class GetLatestScoreViewModel
     {
-        private IScoreRepository scoreRepository;
-
-        public GetLatestScoreViewModel()
-        {
-            this.scoreRepository = new ScoreRepository();
-        }
-
-        public GetLatestScoreViewModel GetScore()
-        {
-            Mapper.CreateMap<Score, GetLatestScoreViewModel>();
-            return Mapper.Map<GetLatestScoreViewModel>(scoreRepository.GetLatestScore());
-        }
-
         public string UserName { get; set; }
         public int ScoreId { get; set; }
         public int ScorePoints { get; set; }

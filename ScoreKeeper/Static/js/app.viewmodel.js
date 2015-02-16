@@ -29,6 +29,7 @@
                 ScorePoints: parseInt(self.tempScore.ScorePoints()),
                 UserId: parseInt(self.tempScore.UserId())
             }
+
             addScoreViewModel.addScore(score).then(function () {
                 addScoreViewModel.getLatestScore().done(function (data) {
                     self.scores.unshift(data);

@@ -7,31 +7,27 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ScoreKeeper.ViewModels;
+using ScoreKeeper.Repositories;
+using ScoreKeeper.Models;
+using AutoMapper;
 
 namespace ScoreKeeper.Controllers
 {
 
     public class ScoresController : ApiController
     {
-        private GetAllScoresViewModel getAllScoresViewModel;
-        private GetLatestScoreViewModel getLatestScoreViewModel;
-        private AddScoreViewModel addScoreViewModel;
-        private DeleteScoreViewModel deleteScoreViewModel;
-        private GetSingleScoreViewModel getSingleScoreViewModel;
+        private IScoreRepository scoreRepository;
 
         public ScoresController()
         {
-            getAllScoresViewModel = new GetAllScoresViewModel();
-            getLatestScoreViewModel = new GetLatestScoreViewModel();
-            addScoreViewModel = new AddScoreViewModel();
-            deleteScoreViewModel = new DeleteScoreViewModel();
-            getSingleScoreViewModel = new GetSingleScoreViewModel();
+            scoreRepository = new ScoreRepository();
         }
 
         // GET api/Scores/GetAllScores
         public IEnumerable<GetAllScoresViewModel> GetAllScores()
         {
-            IEnumerable<GetAllScoresViewModel> allScores = getAllScoresViewModel.GetAllScores();
+            Mapper.CreateMap<Score, GetAllScoresViewModel>();
+            var allScores = Mapper.Map<IEnumerable<GetAllScoresViewModel>>(scoreRepository.GetAllScores());
            
             if (allScores == null)
             {
@@ -44,7 +40,9 @@ namespace ScoreKeeper.Controllers
         // GET api/Scores/GetLatestScore
         public GetLatestScoreViewModel GetLatestScore()
         {
-            GetLatestScoreViewModel latestScore = getLatestScoreViewModel.GetScore();
+
+            Mapper.CreateMap<Score, GetLatestScoreViewModel>();
+            var latestScore = Mapper.Map<GetLatestScoreViewModel>(scoreRepository.GetLatestScore());
 
             if (latestScore == null)
             {
@@ -55,27 +53,28 @@ namespace ScoreKeeper.Controllers
         }
 
         // POST api/Scores/PostScore
-        public void PostScore(AddScoreViewModel scoreViewModel)
+        public void PostScore(Score score)
         {
             if (!ModelState.IsValid)
             {
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
             }
 
-            scoreViewModel.AddScore(scoreViewModel);
+            scoreRepository.AddScore(score);
         }
 
         // DELETE api/Scores/DeleteScore/5
         public void DeleteScore(int id)
         {
-            GetSingleScoreViewModel score = getSingleScoreViewModel.GetSingleScore(id);
+            Mapper.CreateMap<Score, GetSingleScoreViewModel>();
+            var score = Mapper.Map<GetSingleScoreViewModel>(scoreRepository.GetScore(id));
 
             if (score == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            deleteScoreViewModel.DeleteScore(id);
+            scoreRepository.DeleteScore(id);
         }
     }
 }
