@@ -17,7 +17,7 @@ namespace ScoreKeeper.Repositories
     
         public IEnumerable<Score> GetAllScores()
         {
-            var sqlCmd = "SELECT * FROM Scores INNER JOIN Users ON Scores.UserId = 1000000000 ORDER BY ScoreDate DESC";
+            var sqlCmd = "SELECT * FROM Scores INNER JOIN Users ON Scores.UserId = Users.UserId ORDER BY ScoreDate DESC";
             return this.db.Query<Score, User, Score>(sqlCmd, 
                 (score, user) => 
                 { 

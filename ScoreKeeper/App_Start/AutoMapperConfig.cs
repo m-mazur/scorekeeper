@@ -16,6 +16,7 @@ namespace ScoreKeeper
             ConfigureAllUsersViewModel();
             ConfigureLatestScoreViewModel();
             ConfigureSingleScoreViewModel();
+            ConfigureAddScoreViewModel();
         }
         private static void ConfigureAllScoresViewModel()
         {
@@ -37,6 +38,13 @@ namespace ScoreKeeper
         private static void ConfigureSingleScoreViewModel()
         {
             Mapper.CreateMap<Score, GetSingleScoreViewModel>();
+        }
+
+        private static void ConfigureAddScoreViewModel()
+        {
+            Mapper.CreateMap<AddScoreViewModel, User>();
+            Mapper.CreateMap<AddScoreViewModel, Score>()
+                .ForMember(dest => dest.User, opt => opt.MapFrom(src => src));
         }
     }
 }

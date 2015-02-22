@@ -51,9 +51,9 @@ namespace ScoreKeeper.Controllers
         }
 
         // POST api/Scores/PostScore
-        public void PostScore(Score score)
+        public void PostScore(AddScoreViewModel addScoreViewModel)
         {
-            //var score = Mapper.Map<Score>(scoreViewModel);
+            var score = Mapper.Map<Score>(addScoreViewModel);
             
             if (!ModelState.IsValid)
             {
