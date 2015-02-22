@@ -17,23 +17,40 @@ namespace ScoreKeeper.Repositories
     
         public IEnumerable<Score> GetAllScores()
         {
-            var sqlCmd = "SELECT * FROM Scores INNER JOIN Users ON Scores.UserId = Users.UserId ORDER BY ScoreDate DESC";
-            return this.db.Query<Score>(sqlCmd);
+            var sqlCmd = "SELECT * FROM Scores INNER JOIN Users ON Scores.UserId = 1000000000 ORDER BY ScoreDate DESC";
+            return this.db.Query<Score, User, Score>(sqlCmd, 
+                (score, user) => 
+                { 
+                    score.User = user; 
+                    return score; 
+                }, 
+                splitOn: "ScoreId, UserId");
         }
 
         public Score GetScore(int id)
         {
             var sqlCmd = "SELECT * FROM Scores INNER JOIN Users ON Scores.UserId = Users.UserId WHERE Scores.ScoreId = @paramId";
-            return this.db.Query<Score>(sqlCmd, 
-                new { 
-                    paramId = id 
-                }).FirstOrDefault();
+            return this.db.Query<Score, User, Score>(sqlCmd, 
+                (score, user) => 
+                { 
+                    score.User = user; 
+                    return score; 
+                },
+                new
+                {
+                    paramId = id
+                }, splitOn: "ScoreId, UserId").FirstOrDefault();
         }
 
         public Score GetLatestScore()
         {
             var sqlCmd = "SELECT * FROM Scores INNER JOIN Users ON Scores.UserId = Users.UserId WHERE Scores.ScoreId = (SELECT TOP 1 ScoreId FROM Scores ORDER BY ScoreId DESC)";
-            return this.db.Query<Score>(sqlCmd).FirstOrDefault();
+            return this.db.Query<Score, User, Score>(sqlCmd, 
+                (score, user) => 
+                { 
+                    score.User = user; 
+                    return score; 
+                }, splitOn: "ScoreId, UserId").FirstOrDefault();
         }
 
         public void AddScore(Score score) 
@@ -43,7 +60,7 @@ namespace ScoreKeeper.Repositories
                 new { 
                     scorePoints = score.ScorePoints, 
                     scoreDate = DateTime.Now, 
-                    userId = score.UserId
+                    userId = score.User.UserId
                 });
         }
 

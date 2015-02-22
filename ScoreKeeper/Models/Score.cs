@@ -10,8 +10,6 @@ namespace ScoreKeeper.Models
         public int ScoreId { get; set; }
         public int ScorePoints { get; set; }
         public DateTime ScoreDate { get; set; }
-
-        public int UserId { get; set; }
-        public string UserName { get; set; }
+        public User User { get; set; }
     }
 }

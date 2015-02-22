@@ -26,14 +26,15 @@ namespace ScoreKeeper.Controllers
         // GET api/Scores/GetAllScores
         public IEnumerable<GetAllScoresViewModel> GetAllScores()
         {
-            var allScores = Mapper.Map<IEnumerable<GetAllScoresViewModel>>(scoreRepository.GetAllScores());
-           
-            if (allScores == null)
+            try
+            {
+                var allScores = Mapper.Map<IEnumerable<GetAllScoresViewModel>>(scoreRepository.GetAllScores());
+                return allScores;
+            }
+            catch
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
-
-            return allScores;
         }
 
         // GET api/Scores/GetLatestScore
@@ -52,6 +53,8 @@ namespace ScoreKeeper.Controllers
         // POST api/Scores/PostScore
         public void PostScore(Score score)
         {
+            //var score = Mapper.Map<Score>(scoreViewModel);
+            
             if (!ModelState.IsValid)
             {
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
@@ -63,14 +66,15 @@ namespace ScoreKeeper.Controllers
         // DELETE api/Scores/DeleteScore/5
         public void DeleteScore(int id)
         {
-            var score = Mapper.Map<GetSingleScoreViewModel>(scoreRepository.GetScore(id));
-
-            if (score == null)
+            try
+            {
+                var score = Mapper.Map<GetSingleScoreViewModel>(scoreRepository.GetScore(id));
+                scoreRepository.DeleteScore(id);
+            }
+            catch
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
-
-            scoreRepository.DeleteScore(id);
         }
     }
 }
