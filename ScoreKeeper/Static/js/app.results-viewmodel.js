@@ -12,9 +12,9 @@
         return helper.ajaxHelper(deleteScoreUri + score.ScoreId, 'DELETE');
     };
 
-    function get () {
+    function get() {
         return self;
-    }
+    };
 
     return {
         get: get

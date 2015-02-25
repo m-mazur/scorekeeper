@@ -1,7 +1,7 @@
 var Helper = function () {
     var self = this;
 
-    self.ajaxHelper = function(uri, method, data) {
+    self.ajaxHelper = function (uri, method, data) {
         return $.ajax({
             type: method,
             url: uri,
@@ -11,5 +11,5 @@ var Helper = function () {
         }).fail(function () {
             /* Todo */
         });
-    }
+    };
 }

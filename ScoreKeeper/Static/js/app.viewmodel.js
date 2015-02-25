@@ -23,7 +23,7 @@
             resultsViewModel.deleteScore(score).done(function () {
                 self.scores.remove(score);
             });
-        }
+        };
 
         self.addScore = function (formElement) {
             score = {
@@ -36,7 +36,7 @@
                     self.scores.unshift(data);
                 });
             });
-        }
+        };
 
         self.scores.subscribe(function (value) {
             self.leaderboard(leaderBoardViewModel.createLeaderboard(value));
