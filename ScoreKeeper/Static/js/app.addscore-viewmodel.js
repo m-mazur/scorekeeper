@@ -5,11 +5,6 @@ var AddScoreViewModel = (function (helper) {
     var getAllUsersUri = "/api/Users/GetUsers";
     var latestScoreUri = "/api/Scores/GetLatestScore";
 
-    self.tempScore = {
-        ScorePoints: ko.observable("1"),
-        UserId: ko.observable()
-    };
-
     self.options = function scoreOptions() {
         var options = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
         return options;

@@ -1,21 +1,19 @@
 ﻿(function () {
     var ViewModel = function (resultsViewModel, leaderBoardViewModel, addScoreViewModel) {
         var self = this;
-        var tempScore = addScoreViewModel.tempScore;
-        var score = {
-            ScorePoints: ko.observable("1"),
-            UserId: ko.observable()
-        };
 
         self.scores = ko.observableArray();
         self.users = ko.observableArray();
         self.leaderboard = ko.observableArray();
         self.scoresOptions = ko.observableArray(addScoreViewModel.options());
+        self.tempScore = {
+            ScorePoints: ko.observable("1"),
+            UserId: ko.observable()
+        };
+
 
         resultsViewModel.getAllScores().done(function (data) {
             self.scores(data);
-        }).then(function (data){
-            self.leaderboard(leaderBoardViewModel.createLeaderboard(data));
         });
 
         addScoreViewModel.getAllUsers().done(function (data) {
@@ -29,7 +27,7 @@
         };
 
         self.addScore = function (formElement) {
-            score = {
+            var score = {
                 ScorePoints: Number(self.tempScore.ScorePoints()),
                 UserId: Number(self.tempScore.UserId())
             }
@@ -46,5 +44,5 @@
         });
     }
 
-    ko.applyBindings(ViewModel(ResultsViewModel.get(), LeaderBoardViewModel.get(), AddScoreViewModel.get()));
+    ko.applyBindings(ViewModel(new ResultsViewModel.get(), new LeaderBoardViewModel.get(), new AddScoreViewModel.get()));
 }());
