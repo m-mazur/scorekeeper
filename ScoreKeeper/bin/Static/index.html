@@ -23,61 +23,63 @@
     <title>Scorekeeper</title>
 </head>
 <body>
-    <div class="row">
-        <div class="col-md-4">
-            <section class="add-result">
-                <h2>Lägg till nytt resultat</h2>
-                <form data-bind="submit: addScore" role="form">
-                    <p>Användare</p><select class="btn btn dropdown-toggle" data-bind="options: users, optionsText: 'UserName', optionsValue: 'UserId', value: score.UserId"></select><br />
-                    <p>Poäng</p><select class="btn btn dropdown-toggle" data-bind="options: scoresOptions, value: score.ScorePoints"></select><br />
+    <div class="container-wrapper">
+        <div class="row">
+            <div class="col-md-4">
+                <section class="add-result">
+                    <h2>Lägg till nytt resultat</h2>
+                    <form data-bind="submit: addScore" role="form">
+                        <p>Användare</p><select class="btn btn dropdown-toggle" data-bind="options: users, optionsText: 'UserName', optionsValue: 'UserId', value: tempScore.UserId"></select><br />
+                        <p>Poäng</p><select class="btn btn dropdown-toggle" data-bind="options: scoresOptions, value: tempScore.ScorePoints"></select><br />
 
-                    <button type="submit" class="btn btn-success">Lägg till resultat</button>
-                </form>
-            </section>
-        </div>
-        
-        <div class="col-md-4">
-            <section class="´leaderboard">
-                <h2>Tabell</h2>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Användare</th>
-                            <th>Poäng</th>
-                        </tr>
-                    </thead>
-                    <tbody data-bind="foreach: leaderboard">
-                        <tr>
-                            <td data-bind="text: UserName"></td>
-                            <td data-bind="text: ScorePoints"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </div>
+                        <button type="submit" class="btn btn-success">Lägg till resultat</button>
+                    </form>
+                </section>
+            </div>
+            
+            <div class="col-md-4">
+                <section class="´leaderboard">
+                    <h2>Tabell</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Användare</th>
+                                <th>Poäng</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: leaderboard">
+                            <tr>
+                                <td data-bind="text: UserName"></td>
+                                <td data-bind="text: ScorePoints"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
 
-        <div class="col-md-4">
-            <section class="results">
-                <h2>Alla resultat</h2>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Användare</th>
-                            <th>Poäng</th>
-                            <th>Datum</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody data-bind="foreach: scores">
-                        <tr>
-                            <td data-bind="text: UserName"></td>
-                            <td data-bind="text: ScorePoints"></td>
-                            <td data-bind="text: moment(ScoreDate).format('DD/MM/YYYY')"></td>
-                            <td><button class="btn btn-danger" data-bind="click: removeScore"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+            <div class="col-md-4">
+                <section class="results">
+                    <h2>Alla resultat</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Användare</th>
+                                <th>Poäng</th>
+                                <th>Datum</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: scores">
+                            <tr>
+                                <td data-bind="text: UserName"></td>
+                                <td data-bind="text: ScorePoints"></td>
+                                <td data-bind="text: moment(ScoreDate).format('DD/MM/YYYY')"></td>
+                                <td><button class="btn btn-danger" data-bind="click: removeScore"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
         </div>
     </div>
 </body>
