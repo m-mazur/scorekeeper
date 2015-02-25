@@ -8,8 +8,6 @@ var Helper = function () {
             dataType: 'json',
             contentType: 'application/json',
             data: data ? JSON.stringify(data) : null
-        }).fail(function () {
-            /* Todo */
         });
     };
 }
