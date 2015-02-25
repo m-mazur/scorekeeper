@@ -42,5 +42,5 @@
         });
     }
 
-    ko.applyBindings(ViewModel(new ResultsViewModel(), new LeaderBoardViewModel(), new AddScoreViewModel()));
+    ko.applyBindings(ViewModel(new ResultsViewModel(), new LeaderBoardViewModel(), AddScoreViewModel().get()));
 }());
