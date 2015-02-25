@@ -2,7 +2,10 @@
     var ViewModel = function (resultsViewModel, leaderBoardViewModel, addScoreViewModel) {
         var self = this;
         var tempScore = addScoreViewModel.tempScore;
-        var score;
+        var score = {
+            ScorePoints: ko.observable("1"),
+            UserId: ko.observable()
+        };
 
         self.scores = ko.observableArray();
         self.users = ko.observableArray();

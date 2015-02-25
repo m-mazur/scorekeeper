@@ -1,8 +1,7 @@
-﻿function LeaderBoardViewModel() {
+﻿var LeaderBoardViewModel = (function () {
     var self = this;
 
     self.createLeaderboard = function (value) {
-        console.log(value);
         var groupedScores = _.groupBy(value, function (score) {
             return score.UserName;
         });
@@ -16,8 +15,16 @@
             }
         }).value();
 
-        return (_.sortBy(mappedScores, function(list) {
+        return (_.sortBy(mappedScores, function (list) {
             return list.ScorePoints;
         })).reverse();
-    }
-}
+    };
+
+    function get() {
+        return self;
+    };
+
+    return {
+        get: get
+    };
+}());

@@ -19,6 +19,11 @@ section {
     padding: 10px;
 }
 
+.container-wrapper .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .add-result h2 {
     margin-bottom: 40px;
 }

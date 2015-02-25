@@ -1,11 +1,15 @@
 ﻿(function () {
     var ViewModel = function (resultsViewModel, leaderBoardViewModel, addScoreViewModel) {
         var self = this;
+        var tempScore = addScoreViewModel.tempScore;
+        var score = {
+            ScorePoints: ko.observable("1"),
+            UserId: ko.observable()
+        };
 
         self.scores = ko.observableArray();
         self.users = ko.observableArray();
         self.leaderboard = ko.observableArray();
-        self.tempScore = addScoreViewModel.tempScore;
         self.scoresOptions = ko.observableArray(addScoreViewModel.options());
 
         resultsViewModel.getAllScores().done(function (data) {
@@ -15,33 +19,32 @@
         });
 
         addScoreViewModel.getAllUsers().done(function (data) {
-            console.log("hej");
            self.users(data);
         });
 
-        self.deleteScore = function (score) {
+        self.removeScore = function (score) {
             resultsViewModel.deleteScore(score).done(function () {
                 self.scores.remove(score);
             });
-        }
+        };
 
         self.addScore = function (formElement) {
-            var score = {
-                ScorePoints: parseInt(self.tempScore.ScorePoints()),
-                UserId: parseInt(self.tempScore.UserId())
+            score = {
+                ScorePoints: Number(self.tempScore.ScorePoints()),
+                UserId: Number(self.tempScore.UserId())
             }
 
-            addScoreViewModel.addScore(score).then(function () {
+            addScoreViewModel.postScore(score).then(function () {
                 addScoreViewModel.getLatestScore().done(function (data) {
                     self.scores.unshift(data);
                 });
             });
-        }
+        };
 
         self.scores.subscribe(function (value) {
             self.leaderboard(leaderBoardViewModel.createLeaderboard(value));
         });
     }
 
-    ko.applyBindings(ViewModel(new ResultsViewModel(), new LeaderBoardViewModel(), AddScoreViewModel.get()));
+    ko.applyBindings(ViewModel(ResultsViewModel.get(), LeaderBoardViewModel.get(), AddScoreViewModel.get()));
 }());

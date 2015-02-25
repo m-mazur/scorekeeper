@@ -1,9 +1,9 @@
 var AddScoreViewModel = (function (helper) {
+    var self = this;
+
     var postScoreUri = "/api/Scores/PostScore";
     var getAllUsersUri = "/api/Users/GetUsers";
     var latestScoreUri = "/api/Scores/GetLatestScore";
-
-    var self = this;
 
     self.tempScore = {
         ScorePoints: ko.observable("1"),
@@ -19,7 +19,7 @@ var AddScoreViewModel = (function (helper) {
         return helper.ajaxHelper(getAllUsersUri, 'GET');
     };
 
-    self.addScore = function (score) {
+    self.postScore = function (score) {
         return helper.ajaxHelper(postScoreUri, 'POST', score);
     };
 
@@ -27,7 +27,7 @@ var AddScoreViewModel = (function (helper) {
         return helper.ajaxHelper(latestScoreUri, 'GET');
     };
 
-    self.get = function () {
+    function get () {
         return self;
     };
 
