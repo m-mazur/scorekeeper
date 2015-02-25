@@ -777,9 +777,6 @@
     <Content Include="Static\js\app.viewmodel.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Static\js\old.viewmodel.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Static\style\style.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

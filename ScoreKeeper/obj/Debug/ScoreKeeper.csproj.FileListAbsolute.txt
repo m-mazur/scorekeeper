@@ -362,4 +362,3 @@ C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKee
 C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\app.leaderboard-viewmodel.js
 C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\app.results-viewmodel.js
 C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\app.viewmodel.js
-C:\Users\Marcus Mazur\Documents\Visual Studio 2013\Projects\scorekeeper\ScoreKeeper\bin\Static\js\old.viewmodel.js

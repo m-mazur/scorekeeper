@@ -1,4 +1,4 @@
-var AddScoreViewModel = (function () {
+function AddScoreViewModel() {
     var postScoreUri = "/api/Scores/PostScore";
     var getAllUsersUri = "/api/Users/GetUsers";
     var latestScoreUri = "/api/Scores/GetLatestScore";
@@ -27,8 +27,4 @@ var AddScoreViewModel = (function () {
     self.getLatestScore = function () {
         return helper.ajaxHelper(latestScoreUri, 'GET');
     }
-
-    return {
-        get: get
-    };
-}());
+}
