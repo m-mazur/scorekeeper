@@ -12,13 +12,13 @@
             self.scores(data);
         }).then(function (data){
             self.leaderboard(leaderBoardViewModel.createLeaderboard(data));
-        });;
+        });
 
         addScoreViewModel.getAllUsers().done(function (data) {
            self.users(data);
         });
 
-        self.deleteScore = function (score) {
+        self.removeScore = function (score) {
             resultsViewModel.deleteScore(score).done(function () {
                 self.scores.remove(score);
             });
@@ -30,7 +30,7 @@
                 UserId: parseInt(self.tempScore.UserId())
             }
 
-            addScoreViewModel.addScore(score).then(function () {
+            addScoreViewModel.postScore(score).then(function () {
                 addScoreViewModel.getLatestScore().done(function (data) {
                     self.scores.unshift(data);
                 });
@@ -42,5 +42,5 @@
         });
     }
 
-    ko.applyBindings(ViewModel(new ResultsViewModel(), new LeaderBoardViewModel(), new AddScoreViewModel()));
+    ko.applyBindings(ViewModel(ResultsViewModel.get(), LeaderBoardViewModel.get(), AddScoreViewModel.get()));
 }());

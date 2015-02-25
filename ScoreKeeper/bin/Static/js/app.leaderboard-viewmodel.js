@@ -2,6 +2,7 @@
     var self = this;
 
     self.createLeaderboard = function (value) {
+        console.log(value);
         var groupedScores = _.groupBy(value, function (score) {
             return score.UserName;
         });

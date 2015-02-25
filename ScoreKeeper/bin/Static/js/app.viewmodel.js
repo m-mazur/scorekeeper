@@ -12,9 +12,10 @@
             self.scores(data);
         }).then(function (data){
             self.leaderboard(leaderBoardViewModel.createLeaderboard(data));
-        });;
+        });
 
         addScoreViewModel.getAllUsers().done(function (data) {
+            console.log("hej");
            self.users(data);
         });
 
@@ -42,5 +43,5 @@
         });
     }
 
-    ko.applyBindings(ViewModel(new ResultsViewModel(), new LeaderBoardViewModel(), new AddScoreViewModel()));
+    ko.applyBindings(ViewModel(new ResultsViewModel(), new LeaderBoardViewModel(), AddScoreViewModel.get()));
 }());

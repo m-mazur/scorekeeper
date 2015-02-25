@@ -1,4 +1,4 @@
-﻿function LeaderBoardViewModel() {
+﻿var LeaderBoardViewModel = (function () {
     var self = this;
 
     self.createLeaderboard = function (value) {
@@ -15,8 +15,16 @@
             }
         }).value();
 
-        return (_.sortBy(mappedScores, function(list) {
+        return (_.sortBy(mappedScores, function (list) {
             return list.ScorePoints;
         })).reverse();
+    };
+
+    self.get = function () {
+        return self;
     }
-}
+
+    return {
+        get: get
+    };
+}());
