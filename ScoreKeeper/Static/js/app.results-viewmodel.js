@@ -1,8 +1,8 @@
 ﻿var ResultsViewModel = (function (helper) {
+    var self = this;
+
     var allScoresUri = "/api/Scores/GetAllScores";
     var deleteScoreUri = "/api/Scores/DeleteScore/";
-
-    var self = this;
 
     self.getAllScores = function () {
         return helper.ajaxHelper(allScoresUri, 'GET');
@@ -12,7 +12,7 @@
         return helper.ajaxHelper(deleteScoreUri + score.ScoreId, 'DELETE');
     };
 
-    self.get = function () {
+    function get () {
         return self;
     }
 

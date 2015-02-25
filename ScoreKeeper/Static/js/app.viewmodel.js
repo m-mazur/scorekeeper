@@ -1,11 +1,12 @@
 ﻿(function () {
     var ViewModel = function (resultsViewModel, leaderBoardViewModel, addScoreViewModel) {
         var self = this;
+        var tempScore = addScoreViewModel.tempScore;
+        var score;
 
         self.scores = ko.observableArray();
         self.users = ko.observableArray();
         self.leaderboard = ko.observableArray();
-        self.tempScore = addScoreViewModel.tempScore;
         self.scoresOptions = ko.observableArray(addScoreViewModel.options());
 
         resultsViewModel.getAllScores().done(function (data) {
@@ -25,9 +26,9 @@
         }
 
         self.addScore = function (formElement) {
-            var score = {
-                ScorePoints: parseInt(self.tempScore.ScorePoints()),
-                UserId: parseInt(self.tempScore.UserId())
+            score = {
+                ScorePoints: Number(self.tempScore.ScorePoints()),
+                UserId: Number(self.tempScore.UserId())
             }
 
             addScoreViewModel.postScore(score).then(function () {
